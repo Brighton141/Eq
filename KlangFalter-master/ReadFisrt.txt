@@ -1,0 +1,29 @@
+This code creates a simple audio plugin called KlangFalter. The plugin is a convolution
+plugin, which means that it takes an audio signal and convolves it with an impulse response.
+The impulse response is a pre-recorded audio signal that is used to shape the sound of the
+plugin.
+
+The code defines a class called KlangFalter that inherits from the AudioPluginInstance class.
+The AudioPluginInstance class is the base class for all audio plugins in JUCE. It provides
+a number of methods that are used to interact with the audio engine.
+
+The KlangFalter class overrides the prepareToPlay(), processBlock(), and getName() methods.
+The prepareToPlay() method is called once before the plugin starts processing audio. It is
+used to initialize the plugin's state. The processBlock() method is called repeatedly to
+process audio. The getName() method returns the name of the plugin.
+
+The KlangFalter class also defines a static method called createPluginFilter(). This method
+creates an instance of the KlangFalter class and returns it. This method is used by the
+Juce framework to create the plugin instance.
+
+The START_PLUGIN_FACTORY() macro is used to register the KlangFalter plugin with the
+Juce framework. This macro tells the framework that the KlangFalter plugin can be created
+by calling the createPluginFilter() method.
+
+To compile and run the code, you will need to have JUCE installed. You can download JUCE
+from the JUCE website.
+
+Once you have JUCE installed, you can compile the code by opening the KlangFalter.jucer
+project file in Projucer. Projucer is a free cross-platform GUI editor for JUCE projects.
+
+Once the code has been compiled, you can run the plugin by opening it in a DAW.
